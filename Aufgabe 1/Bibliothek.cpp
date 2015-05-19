@@ -10,6 +10,7 @@ Aenderungshistorie:
 -------------------
 Durchgefuehrte Aenderung												|Autor		|Datum
 Repository angelegt, Kopf und Änderungshistorie hinzu.					Tommel		17.5.15
+Methoden ausgarbeitet.													Tommel		19.5.15
 -------------------------------------------------------
 Programmbeschreibung:
 
@@ -20,6 +21,7 @@ Programmbeschreibung:
 
 #pragma once
 #include "Bibliothek.hpp"
+#include <string>
 
 // Konstruktoren
 
@@ -42,3 +44,34 @@ void Bibliothek::mediumBeschaffen(Buch &medium){ // HALLO!
 		medien[this->anz] = medium;
 	}	
 }
+
+void Bibliothek::mediumBeschaffen(DVD &medium){
+	// Zähler um eins erhöhen, Prüfen ob maximum erreicht, wenn nein
+	// wird die Adresse des Objektes dem Array hinzugefügt.
+	if(this->anz +1 <= this->maxAnz){
+		this->anz += 1;
+		medien[this->anz] = medium;
+	}
+}
+
+void Bibliothek::mediumSuchen(string suchwort){
+	for(Medium medObjekt : ptrArray){
+		if(strstr(medObjekt->getTitel(), suchwort)!=null){
+			medObjekt->print();
+		}
+	}
+}
+
+void Bibliothek::mediumAusleihen(int nr, Person & p, Datum d){
+	for(Medium medObjekt : ptrArray){
+		if(medObjekt->nr == nr){
+			medObjekt->ausleihen(p, d, d+p->getAusleihdauer());
+		}
+	}
+}
+
+void Bibliothek::print(){
+	for(Meium medObjekt : ptrArray){
+		medObjekt->print();
+	}
+} 
