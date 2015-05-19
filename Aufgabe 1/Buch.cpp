@@ -11,6 +11,7 @@ Aenderungshistorie:
 Durchgefuehrte Aenderung												|Autor		|Datum
 Repository angelegt, Kopf und Änderungshistorie hinzu.					Tommel		17.5.15
 Klasse Buch erbt jetzt von Klasse Medium.
+Methode Print und Konstruktor hinzu.									Tommel		19.5.15
 -------------------------------------------------------
 Programmbeschreibung:
 
