@@ -46,12 +46,14 @@ void Medium::ausleihen(Person & p, Datum von, Datum bis){
 }
 
 void Medium::print(){
-	cout << "-----------------------------------------" << endl;
-	cout << this->typ << endl;
-	cout << "Titel:     " << this->titel << endl;
-	cout << "Verlag:    " << this->verlag << endl;
-	cout << "Jahr:      " << this->jahr << endl;
-	cout << "Ausleiher: " << this->ausleiher->getName() << endl;
-	cout << "Autor:     " << this->autor << endl;
-	cout << "-----------------------------------------" << endl;
+	switch(this->typ){
+		case: 'Buch'
+			Buch::print();
+			break;
+		case: 'DVD'
+			DVD::print();
+		case else:
+			cout << "Sorry, kein Medientyp festgelegt";
+		}
+	}
 }

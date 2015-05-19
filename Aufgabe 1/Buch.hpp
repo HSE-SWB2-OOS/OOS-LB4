@@ -21,7 +21,6 @@ Programmbeschreibung:
 
 // Buch.hpp
 #pragma once
-
 #include "Medium.hpp"
 
 // Klasse für die Bücher als Spezialisierung von Medium
