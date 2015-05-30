@@ -25,10 +25,10 @@ Programmbeschreibung:
 #using namespace std;
 
 // Konstruktoren
-Datum::Datum(int Tag = 0, int Monat = 0, int Jahr = 0){
-	this->Tag = Tag;
-	this->Monat = Monat;
-	this->Jahr = Jahr;
+Datum::Datum(int tag = 0, int monat = 0, int jahr = 0){
+	this->tag = Tag;
+	this->monat = Monat;
+	this->jahr = Jahr;
 }
 
 // Konvertierkonstruktor String
@@ -39,7 +39,7 @@ Datum::Datum(string strDatum){
 	monat = stoi(str.substr(3,4));
 	jahr = stoi(str.substr(5,8));
 
-	Datum(Tag, Monat, Jahr);
+	Datum(tag, monat, jahr);
 }
 
 // Konvertierkonstruktor für C-String
@@ -50,48 +50,57 @@ Datum::Datum(char charDatum){
 
 // operatoren
 Datum Datum::operator+(int tage){
-	// Zählt Tage zu einem Datum hinzu. Dabei wird auf Monats und Jahreswechsel geachtet.
-	Datum rueckgabeDatum = this;
-	int monatJumper;
-	int addTage;
-
-	switch(rueckgabeDatum.monat){
-		case(1):
-			monatJumper = 31;
-			break;
-		case(2):
-			monatJumper = 27;
-			break;
-		case(3):
-			monatJumper = 31;
-		case(4):
-			monatJumper = 30;
-			break;
-		case(5):
-			monatJumper = 31;
-			break;
-		case(6):
-			monatJumper = 30;
-			break;
-		case(7):
-			monatJumper = 30;
-			break;
-	} // Vervollständigen!
-
 	do{
-		if(rueckgabeDatum.tag + tage > monatJumper){
-			addTage = monatJumper - rueckgabeDatum.tag;
-			tage -= addTage;
-			rueckgabeDatum.tag += addTage;
-			rueckgabeDatum.monat += 1;
-			if(rueckgabeDatum.monat > 12){
-				rueckgabeDatum.jahr +=1;
-				rueckgabeDatum.monat = 1;
+		if(this->monat == 1 || this->monat == 3 || this->monat == 5 || this-monat == 8 || this->monat == 10 || this monat == 12){
+			if (this->tage == 31){
+				if(this->monat==12) {
+					this->jahr++;
+					this->monat=1;
+					this->tag=1;
+					tage--;
+				}
+				else{
+					this->monat++;
+					this->tage=1
+					tage--;
+				}
+			}
+			else{
+				this->tag++;
+				tage--;
 			}
 		}
-		else{
-			rueckgabeDatum.tag += tage;
-			tage = 0;
+
+		if(this->monat == 4 || this->monat == 6 || this->monat == 7 || this-monat == 9 || this->monat == 11){
+			if(this->tag == 30){
+				this->monat++;
+				this->tag=1;
+				tage--;
+			}
+			else{
+				this->tag++;
+				tage--;
+			}	
+		}
+		if(this->monat == 2){
+			if(this->tage == 28){
+				if(this->jahr % 400 == 0 || this->jahr % 100 > 0 || this->jahr % 4 == 0){
+					this->tag++;
+					tage--;
+				}
+				else{
+					this->monat++;
+					this->tag=1;
+					tage--;
+				}
+
+			}
+			else{
+				this->tag++;
+				tage--;
+			}
 		}
 	}while(tage > 0);
+
+	return->this;
 }
