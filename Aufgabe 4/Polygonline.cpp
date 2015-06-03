@@ -3,7 +3,7 @@ Erstersteller: Matthias Geckeler
 E-Mail: matthias.geckeler@stud.hs-esslinge.de
 
 Datum: 16.04.2015
-Version: 1.2
+Version: 1.3
 Zeitaufwand: 0,5h
 
 Aenderungshistorie:
@@ -11,6 +11,7 @@ Aenderungshistorie:
 Durchgefuehrte Aenderung | Autor | Datum
 Operator "<<" und "+" hinzugefügt | Geckeler | 24.04.15
 Methode toString hinzu, Sie liefert einen String für die Ausgabe, Methode print ruft jetzt toString auf. | Tommel | 24.04.15
+Die Klasse Polygonlinie erbt nun von der Klasse OneDimObject | Tommel | 3.6.15
 -------------------------------------------------------
 Programmbeschreibung:
 Die Klasse Polygonline die eien Linienzug mit einer verkettenten Liste darstellt.

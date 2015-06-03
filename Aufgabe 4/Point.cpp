@@ -3,7 +3,7 @@ Erstersteller: Matthias Geckeler
 E-Mail: matthias.geckeler@stud.hs-esslinge.de
 
 Datum: 15.04.2015
-Version: 1.2
+Version: 1.3
 Zeitaufwand: 1,5h
 
 Aenderungshistorie:
@@ -11,6 +11,7 @@ Aenderungshistorie:
 Durchgefuehrte Aenderung | Autor | Datum
 Parameter behafteter Konstruktor angelegt | Geckeler | 16.04.15
 Operatoren "+", "++", "--" und "<<" hinzugefügt | Geckeler | 23.04.15
+Point erbt jetzt von Drawing Object | Tommel | 3.6.15
 -------------------------------------------------------
 Programmbeschreibung:
 Die Klasse Point die das geometrische Objekt Punkt darstellt

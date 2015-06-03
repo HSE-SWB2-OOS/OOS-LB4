@@ -3,7 +3,7 @@ Erstersteller: Matthias Geckeler
 E-Mail: matthias.geckeler@stud.hs-esslinge.de
 
 Datum: 15.04.2015
-Version: 1.2
+Version: 1.3
 Zeitaufwand: 0,75h
 
 Aenderungshistorie:
@@ -11,6 +11,7 @@ Aenderungshistorie:
 Durchgefuehrte Aenderung | Autor | Datum
 Operator "<<" hinzugefügt | Geckeler | 23.04.15
 Methode toString und Konvertierungskonstruktor hinzu. Die Methode Print greift nun auf die Methode toString zu. | Tommel | 24.04.15
+Die Klasse Circle erbt nun von der Klasse OneDimObject | Tommel | 3.6.15
 -------------------------------------------------------
 Programmbeschreibung:
 Die Klasse Circle die das geometrische Objekt Kreis darstellt
