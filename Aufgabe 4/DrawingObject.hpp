@@ -20,6 +20,7 @@ Programmbeschreibung:
 #include"objectCounter.hpp"
 
 class DrawingObject : public ObjectCounter {
+public:
 	// Konstruktoren und Destruktor
 	DrawingObject();
 	~DrawingObject();

@@ -21,11 +21,11 @@ Die Klasse Point die das geometrische Objekt Punkt darstellt
 #include "Ponit.hpp"
 
 // Standart Konstruktor
-Point::Point() :x(0), y(0)
+Point::Point() :x(0), y(0), DrawingObject()
 {
 }
 
-Point::Point(double posX, double posY) : x(posX), y(posY)
+Point::Point(double posX, double posY) : x(posX), y(posY), DrawingObject()
 {
 }
 
@@ -35,7 +35,7 @@ Point::Point(string str){
 
 	// Hinweis: Übergabe des Strings muss zwischen "(" und ")" mit Punkten durch komma getrennt, als isstream (InputStringStream erfolgen)
 	// Leerzeichen entfernen
-	str = MyString::trim(str, ' ');
+	str = MyString::remove(str, ' ');
 
 	int xStart = (int)str.find("(") + 1;
 	int xEnde = (int)str.find(",") - 1;
@@ -108,7 +108,7 @@ void operator>>(istringstream & iStrStream, Point & pos)
 	// Hinweis: Übergabe des Strings muss zwischen "(" und ")" mit Punkten durch komma getrennt, als isstream (InputStringStream erfolgen)
 
 	// Leerzeichen entfernen
-	str = MyString::trim(str, ' ');
+	str = MyString::remove(str, ' ');
 
 	int xStart = (int)str.find("(") + 1;
 	int xEnde = (int)str.find(",") - 1;

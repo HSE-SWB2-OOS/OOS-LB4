@@ -20,6 +20,7 @@ Programmbeschreibung:
 #include "DrawingObject.hpp"
 
 class OneDimObject : public DrawingObject {
+public:
 	// Konstruktoren und Destruktoren
 	OneDimObject();
 	~OneDimObject();

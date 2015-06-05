@@ -28,7 +28,7 @@ class ObjectCounter {
 
 public:
 	// get Methoden
-	unsigned int getID();
+	virtual unsigned int getID();
 	static unsigned int getMaxId();
 	static unsigned int getNumber();
 

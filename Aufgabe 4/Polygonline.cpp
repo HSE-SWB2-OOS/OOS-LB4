@@ -18,10 +18,11 @@ Die Klasse Polygonline die eien Linienzug mit einer verkettenten Liste darstellt
 ---------------------
 */
 
+#pragma once
 #include "Polygonline.hpp" 
 
 // Default Konstruktor
-Polygonline::Polygonline()
+Polygonline::Polygonline() : OneDimObject()
 {
 }
 
@@ -37,7 +38,7 @@ Polygonline::Polygonline(string str){
 	char pointBegin = '(';
 	char pointEnd = ')';
 
-	str = MyString::trim(str, ' ');
+	str = MyString::remove(str, ' ');
 	istringstream strStream(str);
 
 	// Jedes Zeichen durchgehen

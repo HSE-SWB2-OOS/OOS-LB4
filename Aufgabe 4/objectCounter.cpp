@@ -16,6 +16,7 @@ Die Klasse objectCounter zählt Elemente, vergibt eindeutige IDs und verwaltet d
 */
 
 // Includes
+#pragma once
 #include "ObjectCounter.hpp"
 
 // Get Methioden

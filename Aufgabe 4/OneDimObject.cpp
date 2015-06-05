@@ -16,8 +16,12 @@ Programmbeschreibung:
 ---------------------
 */
 
+#pragma once
 #include "OneDimObject.hpp"
 
 // Konstruktor, Destruktor
-OneDimObject::OneDimObject();
-OneDimObject::~OneDimObject();
+OneDimObject::OneDimObject(){
+}
+OneDimObject::~OneDimObject(){
+
+}

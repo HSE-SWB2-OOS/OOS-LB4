@@ -16,10 +16,14 @@ Programmbeschreibung:
 ---------------------
 */
 
+#pragma once
 #include "DrawingObject.hpp"
 
 // Konstruktor, Destruktor
-DrawingObject::DrawingObject();
-DrawingObject::~DrawingObject();
+DrawingObject::DrawingObject() : ObjectCounter(){
+
+}
+DrawingObject::~DrawingObject(){
+};
 
 
