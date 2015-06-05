@@ -25,10 +25,11 @@ Die Header Datei für die Klasse Point die das geometrische Objekt Punkt darstell
 #include <sstream>
 #include <ostream>
 #include "MyString.hpp"
+#include "DrawingObject.hpp"
 
 using namespace std;
 
-class Point : DrawingObject
+class Point : public DrawingObject
 {
 public:
 	Point();

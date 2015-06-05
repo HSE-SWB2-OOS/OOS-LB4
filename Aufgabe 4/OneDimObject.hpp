@@ -16,8 +16,11 @@ Programmbeschreibung:
 ---------------------
 */
 
-class OneDimObject : DrawingObject {
+#pragma once
+#include "DrawingObject.hpp"
+
+class OneDimObject : public DrawingObject {
 	// Konstruktoren und Destruktoren
 	OneDimObject();
 	~OneDimObject();
-}
+};

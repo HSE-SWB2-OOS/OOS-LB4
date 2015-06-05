@@ -25,8 +25,9 @@ Die Header Datei für die Klasse Circle die das geometrische Objekt für Kreis dar
 #include <iostream>
 #include <sstream>
 #include <ostream>
+#include "OneDimObject.hpp"
 
-class Circle : OneDimObject
+class Circle : public OneDimObject
 {
 public:
 	Circle();

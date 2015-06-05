@@ -15,6 +15,8 @@ Die Klasse ObjectCounter zählt Elemente, vergibt eindeutige IDs und verwaltet d
 ---------------------
 */
 
+#pragma once
+
 class ObjectCounter {
 
 	// Variablen deklarieren

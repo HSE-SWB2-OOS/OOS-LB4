@@ -26,8 +26,9 @@ Die Header Datei für die Klasse Polygonlinie.
 #include <sstream>
 #include <string>
 #include <ostream>
+#include "OneDimObject.hpp"
 
-class Polygonline : OneDimObject
+class Polygonline : public OneDimObject
 {
 public:
 	Polygonline();

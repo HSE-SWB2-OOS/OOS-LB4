@@ -16,9 +16,11 @@ Programmbeschreibung:
 ---------------------
 */
 
+#pragma once
+#include"objectCounter.hpp"
 
-class DrawingObject : ObjectCounter {
+class DrawingObject : public ObjectCounter {
 	// Konstruktoren und Destruktor
 	DrawingObject();
 	~DrawingObject();
-}
+};
