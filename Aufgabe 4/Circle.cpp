@@ -17,7 +17,7 @@ Programmbeschreibung:
 Die Klasse Circle die das geometrische Objekt Kreis darstellt
 ---------------------
 */
-
+#pragma once
 #include "Circle.hpp"
 
 // Standart Konstruktor

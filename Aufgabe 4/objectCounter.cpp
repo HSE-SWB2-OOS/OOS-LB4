@@ -24,9 +24,9 @@ unsigned int ObjectCounter::getID() {return this->id;}
 unsigned int ObjectCounter::getMaxId(){return maxId;}
 unsigned int ObjectCounter::getNumber() {return number;}
 
-// Initialieren der Konstanten
-unsigned int ObjectCounter::maxId = 0;
-unsigned int ObjectCounter::number = 0;
+//// Initialieren der Konstanten
+//unsigned int ObjectCounter::maxId = 0;
+//unsigned int ObjectCounter::number = 0;
 
 // Konstruktoren
 ObjectCounter::ObjectCounter() {

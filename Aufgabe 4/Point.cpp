@@ -17,7 +17,7 @@ Programmbeschreibung:
 Die Klasse Point die das geometrische Objekt Punkt darstellt
 ---------------------
 */
-
+#pragma once
 #include "Ponit.hpp"
 
 // Standart Konstruktor

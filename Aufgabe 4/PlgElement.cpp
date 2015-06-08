@@ -14,7 +14,7 @@ Programmbeschreibung:
 Die Klasse PlgElement die ein Element der Verketteten Liste von Polygonline darstellt.
 ---------------------
 */
-
+#pragma once
 #include "PlgElement.hpp"
 
 // Default Konstruktor
