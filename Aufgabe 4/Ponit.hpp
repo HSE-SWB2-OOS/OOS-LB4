@@ -46,9 +46,6 @@ public:
 	void print(bool newLine = true) const;
 	string toString() const;
 
-	static unsigned int getId();
-	//static unsigned int getNumber();
-
 	// Operatoren
 	friend void operator>>(istringstream & iStrStream, Point & pos);
 	friend ostream & operator<< (ostream & o, Point const & pos);

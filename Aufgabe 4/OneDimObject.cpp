@@ -18,10 +18,12 @@ Programmbeschreibung:
 
 #pragma once
 #include "OneDimObject.hpp"
+#include <iostream>
 
 // Konstruktor, Destruktor
 OneDimObject::OneDimObject(){
+	std::cout << std::endl << "Konstruktor der Klasse OneDimObject, ObjectID: " << getId() << std::endl;
 }
 OneDimObject::~OneDimObject(){
-
+	std::cout << std::endl << "Destruktor der Klasse OneDimObject, ObjectID: " << getId() << std::endl;
 }

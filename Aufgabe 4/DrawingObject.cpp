@@ -18,12 +18,15 @@ Programmbeschreibung:
 
 #pragma once
 #include "DrawingObject.hpp"
+#include <iostream>
 
 // Konstruktor, Destruktor
 DrawingObject::DrawingObject() : ObjectCounter(){
+	std::cout << std::endl << "Konstruktor der Klasse DrawingObject, ObjectID: " << getId() << std::endl;
 
 }
 DrawingObject::~DrawingObject(){
+	std::cout << std::endl << "Destruktor der Klasse DrawingObject, ObjectID: " << getId() << std::endl;
 };
 
 
