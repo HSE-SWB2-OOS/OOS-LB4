@@ -29,4 +29,3 @@ DrawingObject::~DrawingObject(){
 	std::cout << std::endl << "Destruktor der Klasse DrawingObject, ObjectID: " << getId() << std::endl;
 };
 
-

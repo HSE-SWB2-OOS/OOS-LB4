@@ -19,6 +19,7 @@ Die Klasse Point die das geometrische Objekt Punkt darstellt
 */
 #pragma once
 #include "Ponit.hpp"
+#include <iostream>
 
 // Standart Konstruktor
 Point::Point() :x(0), y(0), DrawingObject()
@@ -27,6 +28,14 @@ Point::Point() :x(0), y(0), DrawingObject()
 
 Point::Point(double posX, double posY) : x(posX), y(posY), DrawingObject()
 {
+}
+
+Point::Point(const Point &p){
+	this->setX(p.getX());
+	this->setY(p.getY());
+	
+	std::cout << std::endl << "Kopierkonstruktor der Klasse Point, Objekt ID: " << getId() << endl;
+
 }
 
 // Konvertierungskonstruktor, konvertiert einen String zu einem netten Punkt.

@@ -20,6 +20,7 @@ Die Klasse Polygonline die eien Linienzug mit einer verkettenten Liste darstellt
 
 #pragma once
 #include "Polygonline.hpp" 
+#include <iostream>
 
 // Default Konstruktor
 Polygonline::Polygonline() : OneDimObject()

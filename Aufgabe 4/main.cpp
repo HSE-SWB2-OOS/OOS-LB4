@@ -23,6 +23,7 @@ int main(void)
 	Polygonline l1(p1);
 	cout << "l1 ObjectId: " << l1.getId() << " " << l1 << endl;
 	cout << "Anzahl der Objekte: " << c1.getNumber() << endl;
+	cout << "Die hoechste ID war: " << c1.getMaxId() << endl;
 
 	cin.get();
 }

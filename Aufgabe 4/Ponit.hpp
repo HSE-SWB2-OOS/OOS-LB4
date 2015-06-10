@@ -12,6 +12,7 @@ Durchgefuehrte Aenderung | Autor | Datum
 Parameter behafteter Konstruktor angelegt | Geckeler | 16.04.15
 Operatoren "+", "++", "--" und "<<" hinzugefügt | Geckeler | 23.04.15
 Klasse Point erbt jetzt von DrawingObject | Tommel | 3.6.15
+Kopierkonstruktor hinzu. | Tommel | 10.6.15
 -------------------------------------------------------
 Programmbeschreibung:
 Die Header Datei für die Klasse Point die das geometrische Objekt Punkt darstellt.
@@ -35,6 +36,7 @@ public:
 	Point();
 	Point(double posX, double posY);
 	Point(string);
+	Point(const Point &);
 	~Point();
 
 	void setX(double posX);
