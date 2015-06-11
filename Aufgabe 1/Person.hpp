@@ -33,7 +33,7 @@ class Person {
 	int ausleihdauer;
 public:
 	// Standardkonstruktor
-	Person(string , int);
+	Person(string name, int dauer = 0);
 	// den Namen zurückliefern
 	string getName() const;
 	// die Ausliehdauer zurückliefern

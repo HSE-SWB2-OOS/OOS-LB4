@@ -20,39 +20,39 @@ Programmbeschreibung:
 
 // Datum.cpp
 
-#pragma once
+#pragma once;
 #include "Datum.hpp"
-using namespace std;
-#include <string>
+#using namespace std;
 
 // Konstruktoren
-Datum::Datum(int tag, int monat, int jahr){
-	this->tag = tag;
-	this->monat = monat;
-	this->jahr = jahr;
+Datum::Datum(int tag = 0, int monat = 0, int jahr = 0){
+	this->tag = Tag;
+	this->monat = Monat;
+	this->jahr = Jahr;
 }
 
 // Konvertierkonstruktor String
-Datum::Datum(const string & strDatum){
+Datum::Datum(string strDatum){
 	int tag, monat, jahr;
-	//tag = stoi(string.substr(0,2));
-	//monat = stoi(str.substr(3,4));
-	//jahr = stoi(str.substr(5,8));
+
+	tag = stoi(str.substr(0,2));
+	monat = stoi(str.substr(3,4));
+	jahr = stoi(str.substr(5,8));
 
 	Datum(tag, monat, jahr);
 }
 
 // Konvertierkonstruktor für C-String
-Datum::Datum(const char *charDatum){
-	string &strDatum=(string)charDatum;
+Datum::Datum(char charDatum){
+	string strDatum=(string)charDatum;
 	Datum(strDatum);
 }
 
 // operatoren
 Datum Datum::operator+(int tage){
 	do{
-		if(this->monat == 1 || this->monat == 3 || this->monat == 5 || this->monat == 8 || this->monat == 10 || this->monat == 12){
-			if (this->tag == 31){
+		if(this->monat == 1 || this->monat == 3 || this->monat == 5 || this-monat == 8 || this->monat == 10 || this monat == 12){
+			if (this->tage == 31){
 				if(this->monat==12) {
 					this->jahr++;
 					this->monat=1;
@@ -61,7 +61,7 @@ Datum Datum::operator+(int tage){
 				}
 				else{
 					this->monat++;
-					this->tag = 1;
+					this->tage=1
 					tage--;
 				}
 			}
@@ -71,7 +71,7 @@ Datum Datum::operator+(int tage){
 			}
 		}
 
-		if(this->monat == 4 || this->monat == 6 || this->monat == 7 || this->monat == 9 || this->monat == 11){
+		if(this->monat == 4 || this->monat == 6 || this->monat == 7 || this-monat == 9 || this->monat == 11){
 			if(this->tag == 30){
 				this->monat++;
 				this->tag=1;
@@ -83,7 +83,7 @@ Datum Datum::operator+(int tage){
 			}	
 		}
 		if(this->monat == 2){
-			if(this->tag == 28){
+			if(this->tage == 28){
 				if(this->jahr % 400 == 0 || this->jahr % 100 > 0 || this->jahr % 4 == 0){
 					this->tag++;
 					tage--;
@@ -102,5 +102,5 @@ Datum Datum::operator+(int tage){
 		}
 	}while(tage > 0);
 
-	return *this;
+	return->this;
 }

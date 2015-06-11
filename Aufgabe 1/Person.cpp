@@ -21,8 +21,7 @@ Programmbeschreibung:
 // Person.cpp
 
 #pragma once
-#include "Person.hpp"
-#include <iostream>
+#include "Person.cpp"
 
 // Konstruktoren
 Person::Person(string name, int dauer = 0){
@@ -36,5 +35,5 @@ int Person::getAusleihdauer()const{return this->ausleihdauer;}
 
 // klassenmethoden
 void Person::print()const{
-	std::cout << this->name;
+	cout << this->name;
 }

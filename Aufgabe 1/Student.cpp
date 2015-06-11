@@ -31,6 +31,6 @@ Student::Student(string name, int matNr) : Person(name, 40){
 }
 
 // Klassenmethoden
-void Student::print()const{
+void Student::print(){
 	Person::print();
 }
