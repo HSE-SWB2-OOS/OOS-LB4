@@ -49,7 +49,7 @@ class Medium {
 public:
 	// Konstruktor
 	Medium(string t = "", string v = "", int j = 0, 
-		   string typ = "undef");
+		   string typ ="unbek");
 	// Titel zurückliefern
 	string getTitel() const;
 	// Typ zurückliefern
@@ -60,5 +60,4 @@ public:
 	void ausleihen(Person & p, Datum von, Datum bis);
 	// Medium in der Konsole ausgeben
 	void print() const;
-
 };

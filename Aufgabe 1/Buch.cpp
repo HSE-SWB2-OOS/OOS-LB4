@@ -22,17 +22,10 @@ Programmbeschreibung:
 #include "Buch.hpp"
 #include <iostream>
 //Konstruktoren
-Buch::Buch(string t = "", string a = "", string v = "", int jahr = 0) : Medium::Medium(t, v, jahr, "Buch"){
+Buch::Buch(string t , string a, string v, int jahr) : Medium(t, v, jahr, "Buch"){
 	this->autor = a;
 }
 
-void Buch:Buch(){
-		cout << "-----------------------------------------" << endl;
-	cout << this->typ << endl;
-	cout << "Titel:     " << this->titel << endl;
-	cout << "Verlag:    " << this->verlag << endl;
-	cout << "Jahr:      " << this->jahr << endl;
-	cout << "Ausleiher: " << this->ausleiher->getName() << endl;
-	cout << "Autor:     " << this->autor << endl;
-	cout << "-----------------------------------------" << endl;
+void Buch::print()const{
+	Medium::print();
 }

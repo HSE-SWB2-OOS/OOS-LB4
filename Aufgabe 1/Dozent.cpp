@@ -28,10 +28,10 @@ Programmbeschreibung:
 using namespace std;
 
 // Konstruktoren
-Dozent::Dozent(string name, int prfrNr) : Person::Person(name, 30){
+Dozent::Dozent(string name, int prfrNr) : Person(name, (int)30){
 	this->prfrNr = prfrNr;
 }
 
-void Dozent::print(){
+void Dozent::print()const{
 	Person::print();
 }
