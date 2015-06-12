@@ -2,11 +2,9 @@
 /* Labor 4, Aufgabe 1
 Erstersteller: Matthias Geckeler / Jan Binder / Thomas Günter
 E-Mail: matthias.geckeler@stud.hs-esslinge.de / jabi00hs-esslingen.de / thomas.guenter@stud.hs-esslingen.de
-
 Datum: 17.5.15
 Version: 1.0
-Zeitaufwand: 
-
+Zeitaufwand:
 Aenderungshistorie:
 -------------------
 Durchgefuehrte Aenderung												|Autor		|Datum
@@ -14,7 +12,6 @@ Repository angelegt, Kopf und Änderungshistorie hinzu.					Tommel		17.5.15
 Kontruktor, Get/Set, Ausleihen und print hinzu.							Tommel		19.5.15
 -------------------------------------------------------
 Programmbeschreibung:
-
 ---------------------
 */
 
@@ -48,8 +45,8 @@ class Medium {
 
 public:
 	// Konstruktor
-	Medium(string t = "", string v = "", int j = 0, 
-		   string typ = "undef");
+	Medium(string t = "", string v = "", int j = 0,
+		string typ = "unbek");
 	// Titel zurückliefern
 	string getTitel() const;
 	// Typ zurückliefern
@@ -60,5 +57,4 @@ public:
 	void ausleihen(Person & p, Datum von, Datum bis);
 	// Medium in der Konsole ausgeben
 	void print() const;
-
 };

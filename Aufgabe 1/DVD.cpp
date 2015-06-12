@@ -1,11 +1,9 @@
 /* Labor 4, Aufgabe 1
 Erstersteller: Matthias Geckeler / Jan Binder / Thomas Günter
 E-Mail: matthias.geckeler@stud.hs-esslinge.de / jabi00hs-esslingen.de / thomas.guenter@stud.hs-esslingen.de
-
 Datum: 17.5.15
 Version: 1.0
-Zeitaufwand: 
-
+Zeitaufwand:
 Aenderungshistorie:
 -------------------
 Durchgefuehrte Aenderung												|Autor		|Datum
@@ -14,7 +12,6 @@ Die klasse DVD erbt jetzt von der Klasse Medium
 Konstruktor und Methode Print hinzu.									Tommel		19.5.15
 -------------------------------------------------------
 Programmbeschreibung:
-
 ---------------------
 */
 
@@ -22,20 +19,13 @@ Programmbeschreibung:
 // DVD.cpp
 
 #pragma once
-#include <DVD.hpp>
+#include "DVD.hpp"
+using namespace std;
 
 // Konstruktoren
-DVD::DVD(string t = "", string v = "", int j = 0, int d = 0) : Medium(t, v, j, "DVD") {
-	this->dauer = d;
+DVD::DVD(string t, string v, int j, int d) : dauer(d), Medium(t, v, j, "DVD") {
 }
 
-void DVD::print(){
-			cout << "-----------------------------------------" << endl;
-	cout << this->typ << endl;
-	cout << "Titel:     " << this->titel << endl;
-	cout << "Verlag:    " << this->verlag << endl;
-	cout << "Jahr:      " << this->jahr << endl;
-	cout << "Ausleiher: " << this->ausleiher->getName() << endl;
-	cout << "Dauer:     " << this->dauer << endl;
-	cout << "-----------------------------------------" << endl;
+void DVD::print()const{
+	Medium::print();
 }

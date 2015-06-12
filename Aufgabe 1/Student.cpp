@@ -1,11 +1,9 @@
 /* Labor 4, Aufgabe 1
 Erstersteller: Matthias Geckeler / Jan Binder / Thomas Günter
 E-Mail: matthias.geckeler@stud.hs-esslinge.de / jabi00hs-esslingen.de / thomas.guenter@stud.hs-esslingen.de
-
 Datum: 17.5.15
 Version: 1.0
-Zeitaufwand: 
-
+Zeitaufwand:
 Aenderungshistorie:
 -------------------
 Durchgefuehrte Aenderung												|Autor		|Datum
@@ -14,7 +12,6 @@ Die Kasse Student erbt jetzt von der Klasse Person
 Konstruktor hinzu / Printmethode hinzu									Tommel		19.5.15
 -------------------------------------------------------
 Programmbeschreibung:
-
 ---------------------
 */
 
@@ -31,6 +28,6 @@ Student::Student(string name, int matNr) : Person(name, 40){
 }
 
 // Klassenmethoden
-void Student::print(){
+void Student::print()const{
 	Person::print();
 }
