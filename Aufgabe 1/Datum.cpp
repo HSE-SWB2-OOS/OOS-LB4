@@ -32,17 +32,18 @@ Datum::Datum(int tag, int monat, int jahr){
 // Konvertierkonstruktor String
 Datum::Datum(const string & strDatum){
 	int tag, monat, jahr;
-	//tag = stoi(string.substr(0,2));
-	//monat = stoi(str.substr(3,4));
-	//jahr = stoi(str.substr(5,8));
+
+	tag = stoi(strDatum.substr(0, 2));
+	monat = stoi(strDatum.substr(3, 4));
+	jahr = stoi(strDatum.substr(6, 9));
 
 	Datum(tag, monat, jahr);
 }
 
 // Konvertierkonstruktor für C-String
 Datum::Datum(const char *charDatum){
-	string &strDatum = (string)charDatum;
-	Datum(strDatum);
+	string tempStr(charDatum);
+	&Datum(tempStr);
 }
 
 // operatoren

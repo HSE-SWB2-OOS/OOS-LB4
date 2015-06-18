@@ -25,4 +25,6 @@ Buch::Buch(string t, string a, string v, int jahr) : Medium(t, v, jahr, "Buch"){
 
 void Buch::print()const{
 	Medium::print();
+	cout << "Auto :  " << this->autor << endl;
+	cout << "-----------------------------------------" << endl;
 }

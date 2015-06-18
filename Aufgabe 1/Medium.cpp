@@ -45,7 +45,8 @@ void Medium::print()const{
 	cout << "Titel:     " << this->getTitel() << endl;
 	cout << "Verlag:    " << this->verlag << endl;
 	cout << "Jahr:      " << this->jahr << endl;
-	cout << "Ausleiher: " << this->getAusleiher()->getName() << endl;
-	cout << "-----------------------------------------" << endl;
-
+	if (this->getAusleiher() == NULL)
+		cout << "Zur Zeit nicht ausgeliehen." << endl;
+	else
+		cout << "Ausleiher: " << this->getAusleiher()->getName() << endl;
 }

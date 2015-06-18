@@ -20,6 +20,7 @@ Programmbeschreibung:
 
 #pragma once
 #include "DVD.hpp"
+#include <iostream>
 using namespace std;
 
 // Konstruktoren
@@ -28,4 +29,6 @@ DVD::DVD(string t, string v, int j, int d) : dauer(d), Medium(t, v, j, "DVD") {
 
 void DVD::print()const{
 	Medium::print();
+	cout << "Spieldauer: " << this->dauer << endl;
+	cout << "-----------------------------------------" << endl;
 }

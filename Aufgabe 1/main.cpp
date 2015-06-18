@@ -4,6 +4,7 @@
 #include "DVD.hpp"
 #include "Student.hpp"
 #include "Dozent.hpp"
+#include <iostream>
 
 int main() {
 	// Ulaute etc. in der Konsole zulassen
@@ -39,17 +40,18 @@ für 0- bis 3-Jährige", "Cornelsen", 2013, 30);
 	bib.mediumBeschaffen(d2);
 	// Bestand der Bibliothek ausgeben
 	bib.print();
-	// Personen anlegen
-	Student p1("Hägar", 12345678);
-	Student p2("Hilde", 87654321);
-	Dozent p3("Prof A", 4711);
-	// Suchen im Bibliotheksbestand durchführen
-	bib.mediumSuchen("C++");
-	bib.mediumSuchen("Kita");
-	// Medien ausleihen
-	bib.mediumAusleihen(2, p1, "25.04.2014");
-	bib.mediumAusleihen(7, p2, "26.04.2014");
-	bib.mediumAusleihen(6, p3, "21.04.2014");
-	// Bestand der Bibliothek ausgeben
-	bib.print();
+	//// Personen anlegen
+	//Student p1("Hägar", 12345678);
+	//Student p2("Hilde", 87654321);
+	//Dozent p3("Prof A", 4711);
+	//// Suchen im Bibliotheksbestand durchführen
+	//bib.mediumSuchen("C++");
+	//bib.mediumSuchen("Kita");
+	//// Medien ausleihen
+	//bib.mediumAusleihen(2, p1, "25.04.2014");
+	//bib.mediumAusleihen(7, p2, "26.04.2014");
+	//bib.mediumAusleihen(6, p3, "21.04.2014");
+	//// Bestand der Bibliothek ausgeben
+	//bib.print();
+	//std::cin.get();
 }

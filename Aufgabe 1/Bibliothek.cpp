@@ -24,9 +24,11 @@ Programmbeschreibung:
 
 Bibliothek::Bibliothek(int maxAnza) : maxAnz(maxAnza){ // HALLO!
 	this->anz = 0;
-	Medium *ptrArray = new Medium[maxAnz];	// Pointerarray für die Zeiger zu den einzelnen Titeln.
+	Medium *ptrArray = new Medium[this->maxAnz];	// Pointerarray für die Zeiger zu den einzelnen Titeln.
 	medien = &ptrArray;				// Verknüpfung PtrPtr -> ptrArray
 }
+
+Bibliothek::~Bibliothek(){};
 
 
 // Klassenmethoden
@@ -37,7 +39,8 @@ void Bibliothek::mediumBeschaffen(Buch &medium){ // HALLO!
 	// wird die Adresse des Objektes dem Array hinzugefügt.
 	if (this->anz + 1 <= this->maxAnz){
 		this->anz += 1;
-		medien[this->anz] = &medium;
+		Medium *temp = &medium;
+		medien[this->anz] = temp;
 	}
 }
 
@@ -46,13 +49,14 @@ void Bibliothek::mediumBeschaffen(DVD &medium){
 	// wird die Adresse des Objektes dem Array hinzugefügt.
 	if (this->anz + 1 <= this->maxAnz){
 		this->anz += 1;
+		medien[this->anz] = new Medium;
 		medien[this->anz] = &medium;
 	}
 }
 
 void Bibliothek::mediumSuchen(string suchwort){
 	for (int i = 0; i < this->anz; i++){
-		if (medien[i]->getTitel == suchwort){
+		if (medien[i]->getTitel() == suchwort){
 			medien[i]->print();
 		}
 	}
@@ -63,7 +67,7 @@ void Bibliothek::mediumAusleihen(int nr, Person & p, Datum d){
 }
 
 void Bibliothek::print()const{
-	for (int i = 0; i < this->anz; i++){
+	for (int i = 1; i < this->anz +1; i++){
 		medien[i]->print();
 	}
 }
