@@ -71,5 +71,5 @@ void Bibliothek::mediumAusleihen(int nr, Person & p, Datum d){
 
 void Bibliothek::print()const{
 	for (int i = 1; i < this->anz +1; i++)
-		this->medien[i]->print();	
+		this->medien[i]->print();	// Test
 }
